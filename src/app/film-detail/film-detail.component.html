@@ -1,2 +1,6 @@
 <h2>Tela 2</h2>
 <p>Detalhes do filme (ID: {{ id }})</p>
+
+<h2>{{ film.title }}</h2>
+<img src="https://image.tmdb.org/t/p/w500{{ film.poster_path }}" alt="{{ film.title }}">
+<p>{{ film.overview }}</p> 

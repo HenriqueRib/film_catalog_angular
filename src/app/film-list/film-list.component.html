@@ -1,2 +1,10 @@
 <h1>Tela 1</h1>
-<button (click)="goToFilmDetail()">Ir para o Detsalhe do Filme</button>
+
+<div *ngFor="let movie of movies">
+  <div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.overview }}</p>
+    <button (click)="goToFilmDetail(movie.id)">Detalhes</button>
+  </div>
+</div>
