@@ -1,10 +1,24 @@
-<h1>Tela 1</h1>
+<div class="center">
+  <h1>LIBRO FILMES | CATÁLOGO DE FILMES MAIS POLULARES</h1>
+</div>
 
-<div *ngFor="let movie of movies">
-  <div class="movie-card">
-    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}">
-    <h3>{{ movie.title }}</h3>
-    <p>{{ movie.overview }}</p>
-    <button (click)="goToFilmDetail(movie.id)">Detalhes</button>
+<div class="movie-container">
+  <div class="movie-grid" >
+    <div class="movie-card" *ngFor="let movie of movies.slice((currentPage - 1) * moviesPerPage, currentPage * moviesPerPage); let i = index; trackBy: trackByMovieId">
+      <span (click)="goToFilmDetail(movie.id)">
+        <div>
+        <img class="movie-img" src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}">
+      </div>
+      <div class="movie-card-text">
+        <h3 class="movie-title">{{ movie.title }}</h3>
+        <p class="movie-overview">{{ movie.overview }}</p>
+        <button class="details-button">Detalhes</button>
+      </div>
+      </span>
+    </div>
+  </div>
+  <div class="pagination center">
+    <button  (click)="previousPage()" [disabled]="currentPage === 1">Anterior</button>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Próximo</button>
   </div>
 </div>

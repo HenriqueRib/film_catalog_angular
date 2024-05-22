@@ -1,12 +1,14 @@
 // film-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { MovieService } from '../services/movie.service';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-film-detail',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './film-detail.component.html',
   styleUrls: ['./film-detail.component.css']
 })
@@ -16,7 +18,8 @@ export class FilmDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private movieService: MovieService
+    private movieService: MovieService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -32,5 +35,8 @@ export class FilmDetailComponent implements OnInit {
           });
       }
     });
+  }
+  goToHome() {
+    this.router.navigate(['/']);
   }
 }

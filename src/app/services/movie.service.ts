@@ -24,7 +24,7 @@ export class MovieService {
   }
 
   getMovieById(id: string): Promise<any> {
-    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}`;
+    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}&language=pt&include_video=true`;
     return axios.get(url)
       .then(response => response.data)
       .catch(error => {

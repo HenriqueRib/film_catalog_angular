@@ -1,0 +1,95 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.film-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.film-poster {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.film-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.film-info {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+.film-title {
+  padding: 0 1rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #007bff; /* Cor azul */
+}
+
+.film-tagline {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.film-overview {
+  margin-bottom: 20px;
+  max-width: 80vw;
+}
+
+.film-overview h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.film-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.film-details div {
+  display: flex;
+  align-items: center;
+}
+
+.film-details span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.film-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.film-actions button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-to-home {
+  background-color: #007bff;
+  color: white;
+}
+@media (max-width: 992px) {
+  .flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

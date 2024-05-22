@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FilmListComponent } from './film-list/film-list.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
