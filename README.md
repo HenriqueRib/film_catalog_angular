@@ -2,6 +2,13 @@
 
 O `film_catalog_angular` é uma aplicação web desenvolvida com Angular que permite aos usuários visualizar uma lista de filmes populares e obter detalhes sobre cada filme. Utiliza a API do The Movie Database (TMDB) para obter informações atualizadas sobre os filmes.
 
+## Telas
+
+<img src="src/assets/_1.png" alt="Home" width="200"/>
+<img src="src/assets/_2.png" alt="Home" width="200"/>
+<img src="src/assets/_3.png" alt="Home" width="200"/>
+<img src="src/assets/_4.png" alt="Home" width="200"/>
+
 ## Funcionalidades
 
 - Listagem dos filmes mais populares
